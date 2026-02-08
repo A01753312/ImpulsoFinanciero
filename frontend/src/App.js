@@ -39,6 +39,13 @@ const COMPANY = {
   direccion: "Av. Primero de Mayo Mz1 Lte 12, Infonavit Tepalcapa, 54743, Cuautitlán Izcalli, Estado de México"
 };
 
+// Images - Mexican seniors
+const IMAGES = {
+  hero: "https://images.unsplash.com/photo-1746192703542-1ce8d7ec4e8f?crop=entropy&cs=srgb&fm=jpg&q=85&w=800",
+  about: "https://images.unsplash.com/photo-1746192703876-d73373f0d0eb?crop=entropy&cs=srgb&fm=jpg&q=85&w=800",
+  requirements: "https://images.unsplash.com/photo-1626668011669-31899d142caa?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+};
+
 const SERVICES = [
   {
     icon: DollarSign,
