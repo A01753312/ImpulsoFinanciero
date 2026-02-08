@@ -289,8 +289,8 @@ const HeroSection = () => {
           <div className="animate-fade-in-up stagger-2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                alt="Pareja de pensionados felices"
+                src={IMAGES.hero}
+                alt="Pareja de pensionados mexicanos felices"
                 className="w-full h-auto object-cover aspect-[4/3]"
                 data-testid="hero-image"
               />
@@ -381,8 +381,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1543282949-ffbf6a0f263c?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                alt="Equipo de asesores financieros"
+                src={IMAGES.about}
+                alt="Pareja de adultos mayores mexicanos"
                 className="w-full h-auto object-cover aspect-[4/3]"
                 data-testid="about-image"
               />
