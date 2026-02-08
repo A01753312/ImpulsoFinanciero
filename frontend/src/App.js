@@ -378,7 +378,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
-          <div className="relative">
+          <div className="relative order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={IMAGES.about}
@@ -396,7 +396,7 @@ const AboutSection = () => {
           </div>
 
           {/* Content */}
-          <div>
+          <div className="order-1 lg:order-2">
             <h2 className="font-['Libre_Baskerville'] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] mb-6">
               ¿Quiénes Somos?
             </h2>
