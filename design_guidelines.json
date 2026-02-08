@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "name": "Impulso Financiero",
+    "tone": "Professional, Trustworthy, Accessible, Dignified",
+    "archetype": "Organic & Earthy (Trust & Stability variant)",
+    "target_audience": "Pensioners (IMSS Ley 73), Seniors 60+"
+  },
+  "typography": {
+    "primary_font": "Manrope",
+    "secondary_font": "Libre Baskerville",
+    "font_weights": {
+      "body": "400",
+      "heading": "700",
+      "bold": "700"
+    },
+    "sizes": {
+      "base": "18px",
+      "h1": "text-4xl md:text-6xl",
+      "h2": "text-3xl md:text-5xl",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-lg leading-relaxed"
+    },
+    "instructions": "Use Libre Baskerville for all Headings (H1-H3) to evoke tradition and trust. Use Manrope for body text and numbers for maximum legibility. Ensure base font size is at least 18px for senior readability."
+  },
+  "colors": {
+    "palette": {
+      "primary": "#0F172A",
+      "secondary": "#F5F5F4",
+      "accent": "#B45309",
+      "background": "#FFFFFF",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "border": "#E2E8F0"
+    },
+    "usage": {
+      "primary": "Main headings, Footer background, Primary Buttons (hover state)",
+      "secondary": "Section backgrounds (alternating), Cards",
+      "accent": "Primary Call-to-Action (WhatsApp Buttons), Highlights",
+      "background": "Main page background",
+      "text_primary": "Headings, Main body text",
+      "text_secondary": "Subtitles, less important text (ensure high contrast)"
+    },
+    "accessibility_check": "Ensure all text on colored backgrounds meets WCAG AA standards (4.5:1 ratio). Avoid low-contrast gray text."
+  },
+  "layout": {
+    "grid_system": "Bento Grid Mode A (Simplified for Seniors)",
+    "spacing": "Generous (p-8 to p-12) to prevent clutter",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "sections": {
+      "hero": "Split layout: Value Prop + Trust Signals (Left) vs Warm Human Imagery (Right). Prominent WhatsApp CTA.",
+      "services": "Grid of 4 large cards. High contrast icons. Clear titles.",
+      "about": "Storytelling layout. Text + Image side-by-side.",
+      "requirements": "Checklist style. Large legible list items with check icons.",
+      "faq": "Accordion component (Shadcn). Large clickable areas.",
+      "contact": "Map, Large Phone Numbers, Email, Physical Address."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or Rounded-md. High contrast.",
+      "primary": "bg-accent text-white hover:bg-accent/90",
+      "secondary": "border-2 border-primary text-primary hover:bg-primary/5"
+    },
+    "cards": {
+      "style": "Clean, white background, subtle shadow (shadow-md), rounded-xl. Border-t-4 border-accent for visual pop.",
+      "interaction": "Hover: shadow-lg transition-all duration-300 -translate-y-1"
+    },
+    "navigation": {
+      "style": "Sticky header. White background. Clear, large links. 'Contact' button prominent."
+    },
+    "shadcn_components": [
+      "Accordion (for FAQ)",
+      "Button",
+      "Card",
+      "Input",
+      "Label",
+      "Textarea",
+      "Sheet (for mobile menu)"
+    ]
+  },
+  "visual_enhancers": {
+    "textures": "Subtle paper grain or noise overlay on 'Secondary' background sections to reduce digital harshness.",
+    "icons": "Phosphor Icons (Duotone or Fill). Large size (w-8 h-8 or w-12 h-12).",
+    "radius": "rounded-xl (friendly but professional)",
+    "shadows": "Soft, diffuse shadows. Avoid sharp, harsh drops."
+  },
+  "media": {
+    "image_style": "Authentic, warm, high-quality. Real people, not cartoons. Focus on 'Peace of Mind'.",
+    "image_urls": {
+      "hero_bg": "https://images.unsplash.com/photo-1758686254218-30e3abffba4e?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "about_section": "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "services_bg": "https://images.unsplash.com/photo-1678940804791-9bb479200b29?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "contact_bg": "https://images.unsplash.com/photo-1543282949-ffbf6a0f263c?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "accessibility": {
+    "contrast": "Strict adherence to WCAG AA. Text must be #334155 or darker on white.",
+    "font_size": "Minimum body size 18px. Minimum input text size 16px (to prevent zoom on mobile).",
+    "touch_targets": "Buttons and links must be at least 44x44px.",
+    "reduced_motion": "Respect prefers-reduced-motion. No auto-playing videos."
+  },
+  "instructions_to_main_agent": [
+    "Implement a 'Light Mode' only design. Dark mode is not suitable for this demographic.",
+    "Use the 'Manrope' font for body and 'Libre Baskerville' for headings. Import them via Google Fonts.",
+    "Ensure the WhatsApp button is floating and visible at all times on mobile.",
+    "The 'Services' section must clearly list: Créditos para pensionados IMSS Ley 73, Compra de deuda, Renovación de crédito, Canje de Mejoravit.",
+    "Do not use gradients for text. Keep it solid and high-contrast.",
+    "Use 'lucide-react' or 'phosphor-icons' for icons. Avoid abstract AI emojis.",
+    "Create a 'design_system.js' or similar to centralize these constants if possible, or apply directly via Tailwind classes."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
