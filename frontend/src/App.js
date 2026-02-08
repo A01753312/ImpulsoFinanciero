@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { 
   Phone, 
   Mail, 
@@ -22,6 +22,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import QuoteForm from "@/components/quote-form";
+import CotizaPage from "@/pages/CotizaPage";
 import {
   Accordion,
   AccordionContent,
@@ -109,6 +111,7 @@ const FAQ_ITEMS = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,8 +141,19 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3" data-testid="logo-link">
-            <div className="w-10 h-10 bg-[#B45309] rounded-lg flex items-center justify-center">
-              <DollarSign className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+              {logoLoaded ? (
+                <img
+                  src="/logo.png"
+                  alt="Impulso Financiero"
+                  className="w-10 h-10 object-cover"
+                  onError={() => setLogoLoaded(false)}
+                />
+              ) : (
+                <div className="w-10 h-10 bg-[#B45309] rounded-lg flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-white" />
+                </div>
+              )}
             </div>
             <div className="hidden sm:block">
               <span className="font-['Libre_Baskerville'] text-xl font-bold text-[#0F172A]">
@@ -162,8 +176,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button Desktop */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons Desktop */}
+          <div className="hidden lg:flex items-center gap-4">
+            <Link to="/cotiza">
+              <Button className="bg-[#0F172A] hover:bg-[#0b1220] text-white rounded-full px-6 py-2 font-semibold">
+                Cotiza ya
+              </Button>
+            </Link>
             <a
               href={`https://wa.me/52${COMPANY.whatsapp}?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados`}
               target="_blank"
@@ -221,8 +240,8 @@ const Header = () => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section 
-      id="inicio" 
+    <section
+      id="inicio"
       className="min-h-screen pt-20 flex items-center section-warm grain-overlay"
       data-testid="hero-section"
     >
@@ -232,38 +251,39 @@ const HeroSection = () => {
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full mb-6">
               <Shield className="w-5 h-5 text-[#B45309]" />
-              <span className="text-sm font-medium text-[#475569]">Oficina comercial autorizada Inbursa</span>
+              <span className="text-sm font-medium text-[#64748B]">Oficina comercial autorizada Inbursa</span>
             </div>
-            
+
             <h1 className="font-['Libre_Baskerville'] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] leading-tight mb-6">
-              Créditos para{" "}
-              <span className="text-[#B45309]">Pensionados</span>{" "}
-              IMSS Ley 73
+              Créditos que impulsan tu
+              <span className="text-[#B45309]"> tranquilidad</span>
+              <br />y seguridad financiera
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-[#475569] mb-8 leading-relaxed max-w-xl">
-              En <strong className="text-[#0F172A]">Impulso Financiero</strong> te ayudamos a obtener el crédito que necesitas con las mejores condiciones del mercado. Proceso rápido y sin complicaciones.
+              En <strong className="text-[#0F172A]">Impulso Financiero</strong> ofrecemos soluciones claras, rápidas y con el respaldo de una institución sólida. Transparencia desde la primera conversación hasta la entrega de tu dinero.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={`https://wa.me/52${COMPANY.whatsapp}?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados`}
+                href={`https://wa.me/52${COMPANY.whatsapp}?text=Hola,%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20cr%C3%A9ditos%20de%20pensionados`}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-whatsapp-btn"
               >
-                <Button className="w-full sm:w-auto bg-[#B45309] hover:bg-[#92400E] text-white rounded-full px-8 py-6 text-lg font-semibold">
+                <Button className="w-full sm:w-auto btn-primary">
                   <MessageCircle className="w-6 h-6 mr-2" />
-                  Solicitar Información
+                  Quiero mi cotización gratis
                 </Button>
               </a>
+
               <a href="#servicios">
-                <Button 
-                  variant="outline" 
-                  className="w-full sm:w-auto border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white rounded-full px-8 py-6 text-lg font-semibold"
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto btn-secondary"
                   data-testid="hero-services-btn"
                 >
-                  Ver Servicios
+                  Cómo funciona
                 </Button>
               </a>
             </div>
@@ -276,7 +296,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-[#B45309]" />
-                <span className="text-sm text-[#475569]">Sin aval requerido</span>
+                <span className="text-sm text-[#475569]">Sin aval ni complicaciones</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-[#B45309]" />
@@ -287,25 +307,25 @@ const HeroSection = () => {
 
           {/* Image */}
           <div className="animate-fade-in-up stagger-2 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
                 src={IMAGES.hero}
                 alt="Pareja de pensionados mexicanos felices"
-                className="w-full h-auto object-cover aspect-[4/3]"
+                className="w-full h-auto object-cover hero-image"
                 data-testid="hero-image"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/20 to-transparent"></div>
             </div>
-            
+
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 animate-float hidden sm:block">
+            <div className="absolute-floating hidden sm:block">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
                   <Check className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0F172A]">Crédito Aprobado</p>
-                  <p className="text-sm text-[#475569]">En solo 24 horas</p>
+                  <p className="font-semibold text-[#0F172A]">Precalificación Express</p>
+                  <p className="text-sm text-[#64748B]">Responde rápida en 24 horas</p>
                 </div>
               </div>
             </div>
@@ -753,6 +773,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/cotiza" element={<CotizaPage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
