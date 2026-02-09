@@ -23,7 +23,7 @@ export default function CotizaPage() {
     motivo: ""
   });
   const [errors, setErrors] = useState({});
-  const COMPANY_PHONE = process.env.REACT_APP_WHATSAPP || "5512961663";
+  const COMPANY_PHONE = process.env.REACT_APP_WHATSAPP || "5528822233";
 
   function update(field, value) {
     setForm((s) => ({ ...s, [field]: value }));
@@ -52,7 +52,7 @@ export default function CotizaPage() {
     e.preventDefault();
     if (!validate()) return;
     const message = `Solicitud de Cotización - Impulso Financiero\nRégimen de Pensión / Ingreso: ${form.regimen}\nEdad: ${form.age}\nNombre Completo: ${form.nombre} ${form.apellido1} ${form.apellido2}\nCorreo: ${form.email}\nNúmero de Teléfono: ${form.telefono}\nEntidad Federativa: ${form.entidad}\nPensión / Ingreso Mensual (MXN): ${form.pension}\nMonto de Préstamo Requerido (MXN): ${form.monto}\n¿Descuentan de la pensión?: ${form.descuentan}\nMotivo de la solicitud: ${form.motivo}`;
-    const url = `https://wa.me/52${COMPANY_PHONE}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/525528822233?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   }
 
