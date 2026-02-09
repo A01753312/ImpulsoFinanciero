@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ImpulsoFinanciero/static/css/main.f989a854.css",
+    "main.js": "/ImpulsoFinanciero/static/js/main.1645e141.js",
+    "index.html": "/ImpulsoFinanciero/index.html",
+    "main.f989a854.css.map": "/ImpulsoFinanciero/static/css/main.f989a854.css.map",
+    "main.1645e141.js.map": "/ImpulsoFinanciero/static/js/main.1645e141.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f989a854.css",
+    "static/js/main.1645e141.js"
+  ]
+}
