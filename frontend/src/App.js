@@ -617,10 +617,10 @@ const ContactSection = () => {
               <div>
                 <h4 className="font-semibold text-[#0F172A] text-lg">Correo Electrónico</h4>
                 <a 
-                  href={`mailto:${COMPANY.email}`}
+                  href="mailto:informes@oficinapejecutivopensionados.com"
                   className="text-[#B45309] hover:underline text-lg break-all"
                 >
-                  {COMPANY.email}
+                  informes@oficinapejecutivopensionados.com
                 </a>
               </div>
             </div>
@@ -709,7 +709,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-5 h-5" />
-                {COMPANY.email}
+                informes@oficinapejecutivopensionados.com
               </p>
             </div>
           </div>
