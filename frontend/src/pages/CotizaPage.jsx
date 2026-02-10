@@ -66,11 +66,7 @@ export default function CotizaPage() {
           <div>
             <label className="block text-sm font-medium">Régimen de Pensión / Ingreso *</label>
             <select value={form.regimen} onChange={(e) => update("regimen", e.target.value)} className="mt-1 block w-full rounded-md border px-3 py-2">
-              <option value="">Seleccione su Régimen de Pensión</option>
-              <option>IMSS Ley 73</option>
-              <option>IMSS Ley 97</option>
-              <option>ISSSTE</option>
-              <option>Otros</option>
+              <option value="IMSS Ley 73">IMSS Ley 73</option>
             </select>
             {errors.regimen && <p className="text-xs text-red-600 mt-1">{errors.regimen}</p>}
           </div>
@@ -85,7 +81,7 @@ export default function CotizaPage() {
             <div>
               <label className="block text-sm font-medium">Pensión / Ingreso Mensual (MXN) *</label>
               <input type="number" value={form.pension} onChange={(e) => update("pension", e.target.value)} className="mt-1 block w-full rounded-md border px-3 py-2" />
-              <p className="text-xs text-muted mt-1">Monto mínimo $9,500</p>
+              {/* Monto mínimo eliminado */}
             </div>
           </div>
 
