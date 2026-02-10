@@ -721,6 +721,9 @@ const Footer = () => {
             © {currentYear} {COMPANY.name}. Todos los derechos reservados.
           </p>
           <p className="mt-2">
+            Parque Ejecutivo Zona Norte S.A de C.V
+          </p>
+          <p>
             {COMPANY.direccion}
           </p>
         </div>
