@@ -35,7 +35,7 @@ import {
 const COMPANY = {
   name: "Impulso Financiero",
   razonSocial: "Parque Ejecutivo Zona Norte",
-  whatsapp: "5528822233",
+  whatsapp: "+52 5528822233",
   telefono: "5558684635",
   email: "informes@oficinapejecutivopensionados.com",
   direccion: "Av. Primero de Mayo Mz1 Lte 12, Infonavit Tepalcapa, 54743, Cuautitlán Izcalli, Estado de México"
@@ -184,7 +184,7 @@ const Header = () => {
               </Button>
             </Link>
             <a
-              href={`https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados`}
+              href="https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="header-whatsapp-btn"
@@ -217,7 +217,7 @@ const Header = () => {
                   </a>
                 ))}
                 <a
-                  href={`https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados`}
+                  href="https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4"
@@ -266,7 +266,7 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={`https://wa.me/525528822233?text=Hola,%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20cr%C3%A9ditos%20de%20pensionados`}
+                href="https://wa.me/525528822233?text=Hola,%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20cr%C3%A9ditos%20de%20pensionados"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-whatsapp-btn"
@@ -375,7 +375,7 @@ const ServicesSection = () => {
 
         <div className="text-center mt-12">
           <a
-            href={`https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios`}
+            href="https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="services-whatsapp-btn"
@@ -503,7 +503,7 @@ const RequirementsSection = () => {
               No te preocupes, nuestro equipo de asesores está listo para ayudarte y resolver cualquier pregunta que tengas.
             </p>
             <a
-              href={`https://wa.me/525528822233?text=Hola,%20tengo%20dudas%20sobre%20los%20requisitos%20para%20solicitar%20un%20crédito`}
+              href="https://wa.me/525528822233?text=Hola,%20tengo%20dudas%20sobre%20los%20requisitos%20para%20solicitar%20un%20crédito"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="requirements-whatsapp-btn"
@@ -583,12 +583,12 @@ const ContactSection = () => {
               <div>
                 <h4 className="font-semibold text-[#0F172A] text-lg">WhatsApp</h4>
                 <a 
-                  href={`https://wa.me/52${COMPANY.whatsapp}`}
+                  href="https://wa.me/525528822233"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#B45309] hover:underline text-lg"
                 >
-                  {COMPANY.whatsapp}
+                  +52 5528822233
                 </a>
                 <p className="text-sm text-[#475569]">Respuesta inmediata</p>
               </div>
@@ -701,7 +701,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <p className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5 text-[#25D366]" />
-                {COMPANY.whatsapp}
+                +52 5528822233
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -734,7 +734,7 @@ const WhatsAppButton = () => {
   return (
     <div className="whatsapp-float animate-pulse-glow" data-testid="whatsapp-float">
       <a
-        href={`https://wa.me/52${COMPANY.whatsapp}?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados`}
+        href="https://wa.me/525528822233?text=Hola,%20me%20interesa%20información%20sobre%20créditos%20para%20pensionados"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"

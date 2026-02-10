@@ -23,7 +23,7 @@ export default function CotizaPage() {
     motivo: ""
   });
   const [errors, setErrors] = useState({});
-  const COMPANY_PHONE = process.env.REACT_APP_WHATSAPP || "5528822233";
+  const COMPANY_PHONE = "+52 5528822233";
 
   function update(field, value) {
     setForm((s) => ({ ...s, [field]: value }));
